@@ -2,26 +2,158 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  color: #ffffff;
+  background-color: #030303;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.btn {
+  @apply h-[40px] w-[130px] md:h-[60px] md:w-[230px]  rounded-[10px] hover:bg-[#0c0c0c] flex justify-center items-center font-semibold;
+}
+.btn.prim {
+  background: #232323;
+}
+.btn.sec {
+  background: linear-gradient(90.09deg, #7515ef 1.17%, #ec7d4e 99.92%);
+}
+.h-1 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 73px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.border-light {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 5px solid transparent;
+  border-radius: 15px; /* Set the border radius for rounded corners */
+  z-index: 100;
+  background-color: #030303;
+}
+.border-light::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(to right, #f06, #9f6 80%, transparent);
+  z-index: -1;
+}
+.Radius-1 {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.Radius-2 {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.Radius-5 {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.section {
+  @apply mx-auto;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .section {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .section {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .section {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .section {
+    max-width: 1280px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.slider {
+  width: 800px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.slider-track {
+  display: flex;
+  width: calc(18 * 190px);
+  animation: scrollVertical 17s linear infinite;
+  -webkit-animation: scrollVertical 17s linear infinite;
+}
+.slide {
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes scrollVertical {
+  0% {
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-190 * 9px));
+    -webkit-transform: translateX(calc(-190 * 9px));
+    -moz-transform: translateX(calc(-190 * 9px));
+    -ms-transform: translateX(calc(-190 * 9px));
+    -o-transform: translateX(calc(-190 * 9px));
+  }
+}
+.slider::before,
+.slider::after {
+  /* background: linear-gradient(
+    to right,
+    rgb(3 3 3) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ); */
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+}
+.bg-1 {
+  background-image: url("/bg-1.png");
+  position: absolute;
+  z-index: -10000;
+  height: 200vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  inset: 0px;
 }
