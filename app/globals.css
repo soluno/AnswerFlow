@@ -6,62 +6,27 @@ body {
   color: #ffffff;
   background-color: #030303;
 }
+/* btn classes */
 .btn {
-  @apply h-[40px] w-[130px] md:h-[60px] md:w-[230px]  rounded-[10px] hover:bg-[#0c0c0c] flex justify-center items-center font-semibold;
+  @apply h-[40px] w-[130px] md:h-[60px] md:w-[230px] rounded-[10px] flex justify-center items-center font-semibold;
+}
+.btn {
+  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
 }
 .btn.prim {
+  @apply hover:bg-[#1a1a1a];
   background: #232323;
 }
 .btn.sec {
   background: linear-gradient(90.09deg, #7515ef 1.17%, #ec7d4e 99.92%);
 }
-.h-1 {
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 73px;
-  letter-spacing: -0.02em;
-  text-align: center;
-}
-.border-light {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border: 5px solid transparent;
-  border-radius: 15px; /* Set the border radius for rounded corners */
-  z-index: 100;
-  background-color: #030303;
-}
-.border-light::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: linear-gradient(to right, #f06, #9f6 80%, transparent);
-  z-index: -1;
-}
-.Radius-1 {
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-.Radius-2 {
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-}
-.Radius-5 {
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-}
+/* btn classes */
+
+/* section Classes */
 .section {
   @apply mx-auto;
   width: 100%;
@@ -86,9 +51,10 @@ body {
     max-width: 1280px;
   }
 }
-
+/* section Classes */
+/* horizontal scrolling */
 .slider {
-  width: 800px;
+  width: 100%;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -147,6 +113,9 @@ body {
   -ms-transform: rotateZ(180deg);
   -o-transform: rotateZ(180deg);
 }
+/* horizontal scrolling */
+
+/* images background */
 .bg-1 {
   background-image: url("/bg-1.png");
   position: absolute;
@@ -156,4 +125,53 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   inset: 0px;
+}
+/* images background */
+
+.steps {
+  @apply relative section  flex gap-14 md:gap-28 items-center flex-col py-[100px] md:py-[200px] px-8;
+}
+.card {
+  @apply relative py-16 px-6 md:py-16 md:px-14 flex flex-col lg:flex-row gap-20 items-center w-[100%] md:w-[96%];
+  border: double 2px transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(#101010, #101010),
+    radial-gradient(circle at left center, #2f20ff00 60%, #2a3458);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.border-gad-2 {
+  z-index: 11;
+  border: double 2px transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(#1d1d1d, #1d1d1d),
+    radial-gradient(circle at left center, #2f20ff00 60%, #3d3d3d);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.sticker {
+  @apply absolute top-[-50px]  w-[100px] h-[100px] flex justify-center items-center font-medium text-4xl text-[#A595FD];
+  background-image: url("/Sticker.svg");
+  background-position: center;
+  background-size: contain;
+}
+
+.inner-card-1 {
+  @apply py-3 px-8 bg-[#333333] rounded-[10px] flex justify-between items-center translate-x-[-80px] translate-y-[20px] rotate-[-7deg] transition-all duration-500 ease-in-out;
+}
+.inner-card-2 {
+  @apply py-8 px-8 bg-[#333333] rounded-[10px] flex gap-4 items-start flex-col translate-x-[20px] translate-y-[10px] rotate-[-7deg] transition-all duration-500 ease-in-out;
+}
+.card:hover .inner-card-1,
+.card:hover .inner-card-2 {
+  @apply translate-x-[0px] translate-y-[0px] rotate-[0deg];
 }

@@ -6,7 +6,7 @@ import React from "react";
 function Hero() {
   return (
     <LazyMotion features={domAnimation}>
-      <section className="relative section flex gap-14 md:gap-28 items-center flex-col py-16 md:py-20 md:pb-[2  00px] ">
+      <section className="relative section flex gap-14 md:gap-28 items-center flex-col py-6 sm:py-16 md:py-20 md:pb-[200px] ">
         <div className="flex gap-14 md:gap-20 items-center flex-col">
           <div className="text-center md:max-w-[85%] mx-auto flex gap-8 items-center flex-col">
             <m.h2
@@ -58,7 +58,7 @@ function Hero() {
             </m.button>
           </div>
         </div>
-        <div className=" flex justify-center gap-3 flex-col md:flex-row md:gap-10">
+        <div className=" flex justify-center gap-3 flex-col lg:flex-row md:gap-10">
           <m.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -68,7 +68,7 @@ function Hero() {
               stiffness: 90,
               delay: 1.7,
             }}
-            className="bg-[#1B1B1B] px-12 py-3 rounded-[50px] text-center"
+            className="bg-[#1B1B1B] px-4 md:px-12 py-3 rounded-[50px] text-center"
           >
             🔐 Secure
           </m.div>
@@ -81,7 +81,7 @@ function Hero() {
               stiffness: 90,
               delay: 1.8,
             }}
-            className="bg-[#1B1B1B] px-12 py-3 rounded-[50px] text-center"
+            className="bg-[#1B1B1B] px-4 md:px-12 py-3 rounded-[50px] text-center"
           >
             ☁️ Private Cloud Hosting
           </m.div>
@@ -94,7 +94,7 @@ function Hero() {
               stiffness: 90,
               delay: 1.9,
             }}
-            className="bg-[#1B1B1B] px-12 py-3 rounded-[50px] text-center"
+            className="bg-[#1B1B1B] px-4 md:px-12 py-3 rounded-[50px] text-center"
           >
             ✅ GDPR Compilant
           </m.div>

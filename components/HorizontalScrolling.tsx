@@ -14,16 +14,16 @@ function HorizontalScrolling() {
           stiffness: 50,
           delay: 1.8,
         }}
-        className="section mx-auto flex justify-center  py-10"
+        className="section mx-auto flex justify-center py-6 sm:py-10"
       >
-        <div className="slider ">
+        <div className="slider">
           <div className="slider-track">
             <div className="slide">
               <Image
                 src={"/brand1.svg"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand  "
               ></Image>
             </div>
             <div className="slide">
