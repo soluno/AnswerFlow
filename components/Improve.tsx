@@ -55,10 +55,34 @@ function Improve() {
               <span className="text-[12px] opacity-40">0 4</span>
             </div>
             <div className="max-w-[70%] flex gap-20 flex-col">
-              <h3 className="text-4xl font-medium">CXO’s</h3>
-              <h3 className="text-4xl font-medium">Customer Success</h3>
-              <h3 className="text-4xl font-medium">Sales</h3>
-              <h3 className="text-4xl font-medium">Product</h3>
+              <h3
+                className={`text-4xl font-medium transition-all duration-[0.8s] ease-in-out  ${
+                  card1 == false ? "opacity-[0.3]  " : " opacity-1  visible"
+                }`}
+              >
+                CXO’s
+              </h3>
+              <h3
+                className={`text-4xl font-medium transition-all duration-[0.8s] ease-in-out ${
+                  card2 == false ? "opacity-[0.3]  " : " opacity-1  visible"
+                }`}
+              >
+                Customer Success
+              </h3>
+              <h3
+                className={`text-4xl font-medium transition-all duration-[0.8s] ease-in-out ${
+                  card3 == false ? "opacity-[0.3] " : "opacity-1  visible"
+                }`}
+              >
+                Sales
+              </h3>
+              <h3
+                className={`text-4xl font-medium transition-all duration-[0.8s] ease-in-out ${
+                  card4 == false ? "opacity-[0.3] " : "opacity-1  visible"
+                }`}
+              >
+                Product
+              </h3>
             </div>
           </div>
         </div>
@@ -81,7 +105,7 @@ function Improve() {
           ></div>
 
           <div className="flex h-screen sticky top-0 left-0 w-full items-center">
-            <div className="absolute h-full top-0 left-0 w-full flex items-center pr-16 justify-center">
+            <div className="absolute h-full top-0 left-0 w-full flex items-center  justify-center">
               <div
                 className={`improveCard border-gad-2 ${
                   card1 == false
@@ -130,7 +154,7 @@ function Improve() {
                 </div>
               </div>
             </div>
-            <div className="absolute h-full top-0 left-0 w-full flex items-center pr-16 justify-center">
+            <div className="absolute h-full top-0 left-0 w-full flex items-center  justify-center">
               <div
                 className={`improveCard  border-gad-2 ${
                   card2 == false
@@ -172,7 +196,7 @@ function Improve() {
                 </div>
               </div>
             </div>
-            <div className="absolute h-full top-0 left-0 w-full flex items-center pr-16 justify-center">
+            <div className="absolute h-full top-0 left-0 w-full flex items-center justify-center">
               <div
                 className={`improveCard  border-gad-2 ${
                   card3 == false
@@ -214,7 +238,7 @@ function Improve() {
                 </div>
               </div>
             </div>
-            <div className="absolute h-full top-0 left-0 w-full flex items-center pr-16 justify-center">
+            <div className="absolute h-full top-0 left-0 w-full flex items-center  justify-center">
               <div
                 className={`improveCard  border-gad-2 ${
                   card4 == false
