@@ -126,10 +126,22 @@ body {
   background-repeat: no-repeat;
   inset: 0px;
 }
+.bg-2 {
+  background-image: url(/bg-2.png);
+  position: absolute;
+  z-index: -10000;
+  height: 200vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 6%;
+  left: 0px;
+  right: 0px;
+}
 /* images background */
 
 .steps {
-  @apply relative section  flex gap-14 md:gap-28 items-center flex-col py-[100px] md:py-[200px] px-8;
+  @apply relative section  flex gap-14 md:gap-28 items-center flex-col py-[100px] md:py-[200px] px-2 sm:px-8;
 }
 .card {
   @apply relative py-16 px-6 md:py-16 md:px-14 flex flex-col lg:flex-row gap-20 items-center w-[100%] md:w-[96%];
@@ -174,4 +186,23 @@ body {
 .card:hover .inner-card-1,
 .card:hover .inner-card-2 {
   @apply translate-x-[0px] translate-y-[0px] rotate-[0deg];
+}
+.improveCard {
+  @apply relative w-full bg-[#1B1B1B] text-white rounded-[20px] px-6  py-8 flex gap-8 flex-col transition-all duration-[0.8s] ease-in-out;
+}
+.question {
+  @apply relative px-4 py-2 rounded-[5px] bg-[#292929];
+}
+.question::after {
+  position: absolute;
+  content: "";
+  border: 12px solid;
+  border-radius: 3px;
+  border-color: #292929 transparent transparent #292929;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  left: 0px;
+  bottom: -16px;
 }

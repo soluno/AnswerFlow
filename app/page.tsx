@@ -1,6 +1,8 @@
 import Hero from "@/components/Hero";
 import HorizontalScrolling from "@/components/HorizontalScrolling";
+import Improve from "@/components/Improve";
 import Steps from "@/components/Steps";
+import TextAnimation from "@/components/TextAnimation";
 import Image from "next/image";
 
 export default function Home() {
@@ -10,6 +12,8 @@ export default function Home() {
       <HorizontalScrolling />
       <Hero />
       <Steps />
+      <Improve />
+      <TextAnimation />
     </main>
   );
 }
