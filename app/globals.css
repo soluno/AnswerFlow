@@ -124,7 +124,9 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  inset: 0px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 }
 .bg-2 {
   background-image: url(/bg-2.png);
@@ -134,7 +136,19 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  top: 406%;
+  bottom: 1795px;
+  left: 0px;
+  right: 0px;
+}
+.bg-3 {
+  background-image: url(/bg-2.png);
+  position: absolute;
+  z-index: -10000;
+  height: 200vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 0px;
   left: 0px;
   right: 0px;
 }
@@ -169,10 +183,24 @@ body {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
+.border-gad-1 {
+  padding: 2.5rem;
+  z-index: 11;
+  border: double 2px transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(#101010, #101010),
+    radial-gradient(circle at left center, #2f20ff00 60%, #2a3458);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
 
 .sticker {
   @apply absolute top-[-50px]  w-[100px] h-[100px] flex justify-center items-center font-medium text-4xl text-[#A595FD];
-  background-image: url("/Sticker.svg");
+  background-image: url("/Sticker.png");
   background-position: center;
   background-size: contain;
 }
@@ -205,4 +233,9 @@ body {
   -o-border-radius: 3px;
   left: 0px;
   bottom: -16px;
+}
+.footerText {
+  background: linear-gradient(to bottom, #ffffff, #00000000);
+  -webkit-background-clip: text;
+  color: transparent;
 }

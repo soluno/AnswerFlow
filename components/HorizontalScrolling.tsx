@@ -20,147 +20,147 @@ function HorizontalScrolling() {
           <div className="slider-track">
             <div className="slide">
               <Image
-                src={"/brand1.svg"}
+                src={"/brand-1.png"}
                 height={80}
                 width={80}
-                alt="brand  "
+                alt="brand-  "
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand2.svg"}
+                src={"/brand-2.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand3.svg"}
+                src={"/brand-3.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand4.svg"}
+                src={"/brand-4.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand5.svg"}
+                src={"/brand-5.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand6.svg"}
+                src={"/brand-6.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand7.svg"}
+                src={"/brand-7.png"}
                 height={80}
                 width={160}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand8.svg"}
+                src={"/brand-8.png"}
                 height={80}
                 width={160}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand9.svg"}
+                src={"/brand-9.png"}
                 height={80}
                 width={160}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
 
             <div className="slide">
               <Image
-                src={"/brand1.svg"}
+                src={"/brand-1.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand2.svg"}
+                src={"/brand-2.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand3.svg"}
+                src={"/brand-3.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand4.svg"}
+                src={"/brand-4.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand5.svg"}
+                src={"/brand-5.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand6.svg"}
+                src={"/brand-6.png"}
                 height={80}
                 width={80}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand7.svg"}
+                src={"/brand-7.png"}
                 height={80}
                 width={160}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand8.svg"}
+                src={"/brand-8.png"}
                 height={80}
                 width={160}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
             <div className="slide">
               <Image
-                src={"/brand9.svg"}
+                src={"/brand-9.png"}
                 height={80}
                 width={160}
-                alt="brand"
+                alt="brand-"
               ></Image>
             </div>
           </div>

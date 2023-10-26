@@ -20,12 +20,12 @@ function Steps() {
           </div>
           <div className="inner-card-2 text-sm md:text-base">
             <div className="flex items-center justify-start flex-row gap-4">
-              <Image src={"/Doc.svg"} alt="downArrow" width={20} height={20} />
+              <Image src={"/Doc.png"} alt="downArrow" width={20} height={20} />
               <p>Document</p>
             </div>
             <div className="flex items-center justify-start flex-row gap-4">
               <Image
-                src={"/Database.svg"}
+                src={"/Database.png"}
                 alt="downArrow"
                 width={20}
                 height={20}
@@ -33,7 +33,7 @@ function Steps() {
               <p>Database</p>
             </div>
             <div className="flex items-center justify-start flex-row gap-4  ">
-              <Image src={"/Link.svg"} alt="downArrow" width={20} height={20} />
+              <Image src={"/Link.png"} alt="downArrow" width={20} height={20} />
               <p>Link</p>
             </div>
             <div className="">...........</div>
@@ -59,9 +59,9 @@ function Steps() {
           </div>
         </div>
         <div className="hidden absolute right-[50px] bottom-[60px] lg:flex gap-8 justify-center items-center">
-          <Image src={"/GdprLock.svg"} alt="downArrow" width={50} height={20} />
+          <Image src={"/GdprLock.png"} alt="downArrow" width={50} height={20} />
           <Image
-            src={"/GdprLock2.svg"}
+            src={"/GdprLock2.png"}
             alt="downArrow"
             width={84}
             height={20}
@@ -161,7 +161,7 @@ function Steps() {
             <p>EXAMPLES</p>
             <div className=" w-full flex justify-start items-center gap-4">
               <Image
-                src={"/Magic.svg"}
+                src={"/Magic.png"}
                 alt="downArrow"
                 width={30}
                 height={30}
@@ -170,7 +170,7 @@ function Steps() {
             </div>
             <div className=" w-full flex justify-start items-center gap-4">
               <Image
-                src={"/Magic.svg"}
+                src={"/Magic.png"}
                 alt="downArrow"
                 width={30}
                 height={30}
@@ -179,7 +179,7 @@ function Steps() {
             </div>
             <div className=" w-full flex justify-start items-center gap-4">
               <Image
-                src={"/Magic.svg"}
+                src={"/Magic.png"}
                 alt="downArrow"
                 width={30}
                 height={30}
