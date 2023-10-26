@@ -18,7 +18,7 @@ function Hero() {
                 stiffness: 50,
                 delay: 0.7,
               }}
-              className="text-[44px] leading-[44px] md:text-[64px] md:leading-[64px] font-bold "
+              className="text-[44px] leading-[44px] md:text-[60px] md:leading-[60px] font-bold "
             >
               Just Chat with your Company Data
             </m.h2>
@@ -31,7 +31,7 @@ function Hero() {
                 stiffness: 50,
                 delay: 1,
               }}
-              className="text-[18px] font-normal leading-[24px] md:text-[28px] md:leading-[35px]"
+              className="text-[18px] font-normal leading-[24px] md:text-[22px] md:leading-[32px]"
             >
               Enable rich insights about your sales, customers, product & entire
               organisation and{" "}

@@ -47,7 +47,7 @@ export default function TextAnimation() {
   return (
     <section className="section mx-auto ">
       <div ref={divRef} className="h-[420vh] ">
-        <div className="text-4xl md:text-7xl sticky top-[0] left-0 h-screen ">
+        <div className="text-4xl md:text-6xl sticky top-[0] left-0 h-screen ">
           <div className="relative w-[100%] lg:w-[65%]  mx-auto h-full flex items-center justify-center">
             <p
               ref={pRef}

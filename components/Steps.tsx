@@ -40,10 +40,10 @@ function Steps() {
           </div>
         </div>
         <div className="flex flex-col gap-8 w-[100%] lg:w-[60%] items-center lg:items-start">
-          <h1 className="text-[35px] md:text-[45px] font-bold ">
+          <h1 className="text-[35px] md:text-[42px] font-bold ">
             Connect Data Sources
           </h1>
-          <div className="text-[#9D9D9D] text-[16px] md:text-[22px] font-light flex flex-col gap-5">
+          <div className="text-[#9D9D9D] text-[16px] md:text-[19px] font-light flex flex-col gap-5">
             <p className="flex justify-start items-start gap-2">
               <span>01.</span>
               Signup & Create your Company’s <br /> Knowledge base. 100% NoCode!
@@ -73,10 +73,10 @@ function Steps() {
           <p>2</p>
         </div>
         <div className="flex flex-col gap-8 w-[100%] lg:w-[60%] items-center lg:items-start ">
-          <h1 className="text-[35px] md:text-[45px]  font-bold ">
+          <h1 className="text-[35px] md:text-[42px]  font-bold ">
             Onboard your Team
           </h1>
-          <div className="text-[#9D9D9D] text-[16px] md:text-[22px] font-light flex flex-col gap-5">
+          <div className="text-[#9D9D9D] text-[16px] md:text-[19px] font-light flex flex-col gap-5">
             <p className="flex justify-start items-start gap-2">
               <span>01.</span>
               Invite your organization to access next-gen
@@ -134,10 +134,10 @@ function Steps() {
           <p>3</p>
         </div>
         <div className="flex flex-col gap-8 w-[100%] text-center md:h-[300px] ">
-          <h1 className="text-[35px] md:text-[45px] font-bold ">
+          <h1 className="text-[35px] md:text-[42px] font-bold ">
             Empower Org with Custom ChatGPT Bot
           </h1>
-          <div className="text-[#9D9D9D] text-[16px] md:text-[22px] font-light flex flex-col gap-5">
+          <div className="text-[#9D9D9D] text-[16px] md:text-[19px] font-light flex flex-col gap-5">
             Your Custom LLM ChatBot is up to deliver rich insights about
             everything <br /> from your company’s knowledge through natural
             language prompts

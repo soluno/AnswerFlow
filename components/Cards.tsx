@@ -9,10 +9,10 @@ function Cards() {
           <Image
             src={"/Dashboard.png"}
             alt="Dashboard"
-            width={200}
-            height={200}
+            width={140}
+            height={140}
           />
-          <h2 className="text-[25px] md:text-[45px] font-bold ">
+          <h2 className="text-[25px] md:text-[35px] font-medium ">
             Company Dashboard
           </h2>
         </div>
@@ -20,10 +20,10 @@ function Cards() {
           <Image
             src={"/Knowledge.png"}
             alt="Knowledge  "
-            width={200}
-            height={200}
+            width={140}
+            height={140}
           />
-          <h2 className="text-[25px] md:text-[45px] font-bold ">
+          <h2 className="text-[25px] md:text-[35px] font-medium ">
             Knowledge base Management
           </h2>
         </div>
@@ -31,16 +31,16 @@ function Cards() {
           <Image
             src={"/ApiSetting.png"}
             alt="ApiSetting"
-            width={200}
-            height={200}
+            width={140}
+            height={140}
           />
-          <h2 className="text-[25px] md:text-[45px] font-bold ">
+          <h2 className="text-[25px] md:text-[35px] font-medium ">
             Connections Library
           </h2>
         </div>
         <div className="flex flex-col  border-gad-1  items-center md:items-start xl:w-[50%]">
-          <Image src={"/Cloud.png"} alt="Cloud" width={200} height={200} />
-          <h2 className="text-[25px] md:text-[45px] font-bold ">
+          <Image src={"/Cloud.png"} alt="Cloud" width={140} height={140} />
+          <h2 className="text-[25px] md:text-[35px] font-medium ">
             Secure Cloud Hosting
           </h2>
         </div>

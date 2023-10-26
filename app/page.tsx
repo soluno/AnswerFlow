@@ -12,9 +12,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className=" relative">
-      {/* <div className="bg-1"></div>
+      <div className="bg-1"></div>
       <div className="bg-2"></div>
-      <div className="bg-3"></div> */}
+      <div className="bg-3"></div>
       <Header />
       <HorizontalScrolling />
       <Hero />
