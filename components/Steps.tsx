@@ -152,11 +152,7 @@ function Steps() {
                 width={60}
                 height={60}
               />
-              <input
-                type="text"
-                placeholder="How can I help today?"
-                className="w-full bg-transparent outline-none"
-              />
+              <p className=" text-[#838383]">How can I help today?</p>
             </div>
             <p>EXAMPLES</p>
             <div className=" w-full flex justify-start items-center gap-4">

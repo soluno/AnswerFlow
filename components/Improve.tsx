@@ -15,7 +15,13 @@ function Improve() {
       return prev != 0 ? prev - 1 : prev;
     });
   };
-
+  // useEffect(() => {
+  //   if (current !== 3) {
+  //     setTimeout(() => {
+  //       next();
+  //     }, 2000);
+  //   }
+  // }, [current]);
   const [cardNum, setCardNum] = useState(0);
   const divRef = useRef<HTMLDivElement>(null);
   const refDD = useRef<HTMLDivElement>(null);
@@ -174,7 +180,7 @@ function Improve() {
                     height={60}
                   />
                   <div className="question">
-                    <p className="italic">List top 10 customer pinpoints</p>
+                    <p className="italic">List top 10 customer painpoints</p>
                   </div>
                 </div>
                 <hr />
@@ -295,8 +301,9 @@ function Improve() {
               transform: `translateX(calc((-100% - 30px) * ${current} ))`,
             }}
           >
-            <div className="w-full flex  shrink-0">
-              <div className={`improveCard border-gad-2`}>
+            <div className="w-full flex flex-col items-center gap-4 shrink-0">
+              <h1 className="text-4xl font-medium ">CXO’s</h1>
+              <div className={`improveCard border-gad-2 flex-1`}>
                 <div className="flex items-start gap-6">
                   <Image
                     src={"/person4.png"}
@@ -338,8 +345,9 @@ function Improve() {
                 </div>
               </div>
             </div>
-            <div className="w-full flex shrink-0">
-              <div className={`improveCard  border-gad-2 `}>
+            <div className="w-full flex flex-col items-center gap-4 shrink-0">
+              <h1 className="text-4xl font-medium ">Customer Success</h1>
+              <div className={`improveCard  border-gad-2 flex-1`}>
                 <div className="flex items-start gap-6">
                   <Image
                     src={"/person2.png"}
@@ -374,8 +382,9 @@ function Improve() {
                 </div>
               </div>
             </div>
-            <div className="w-full  flex  shrink-0">
-              <div className={`improveCard  border-gad-2 `}>
+            <div className="w-full flex flex-col items-center gap-4 shrink-0">
+              <h1 className="text-4xl font-medium ">Sales </h1>
+              <div className={`improveCard  border-gad-2 flex-1`}>
                 <div className="flex items-start gap-6">
                   <Image
                     src={"/person6.png"}
@@ -410,8 +419,9 @@ function Improve() {
                 </div>
               </div>
             </div>
-            <div className="w-full flex  shrink-0">
-              <div className={`improveCard  border-gad-2`}>
+            <div className="w-full flex flex-col items-center gap-4 shrink-0">
+              <h1 className="text-4xl font-medium ">Product</h1>
+              <div className={`improveCard  border-gad-2 flex-1`}>
                 <div className="flex items-start gap-6">
                   <Image
                     src={"/person7.png"}

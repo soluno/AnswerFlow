@@ -184,7 +184,8 @@ body {
   -o-border-radius: 20px;
 }
 .border-gad-1 {
-  padding: 2.5rem;
+  padding-block: 2.5rem;
+  padding-inline: 2.8rem;
   z-index: 11;
   border: double 2px transparent;
   border-radius: 20px;

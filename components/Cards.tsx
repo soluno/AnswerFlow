@@ -12,7 +12,7 @@ function Cards() {
             width={140}
             height={140}
           />
-          <h2 className="text-[25px] md:text-[35px] font-medium ">
+          <h2 className="text-[25px] md:text-[32px] font-medium ">
             Company Dashboard
           </h2>
         </div>
@@ -23,7 +23,7 @@ function Cards() {
             width={140}
             height={140}
           />
-          <h2 className="text-[25px] md:text-[35px] font-medium ">
+          <h2 className="text-[25px] md:text-[32px] font-medium ">
             Knowledge base Management
           </h2>
         </div>
@@ -34,13 +34,13 @@ function Cards() {
             width={140}
             height={140}
           />
-          <h2 className="text-[25px] md:text-[35px] font-medium ">
+          <h2 className="text-[25px] md:text-[32px] font-medium ">
             Connections Library
           </h2>
         </div>
         <div className="flex flex-col  border-gad-1  items-center md:items-start xl:w-[50%]">
           <Image src={"/Cloud.png"} alt="Cloud" width={140} height={140} />
-          <h2 className="text-[25px] md:text-[35px] font-medium ">
+          <h2 className="text-[25px] md:text-[32px] font-medium ">
             Secure Cloud Hosting
           </h2>
         </div>

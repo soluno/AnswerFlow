@@ -1,6 +1,7 @@
 "use client";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Hero() {
@@ -43,7 +44,7 @@ function Hero() {
             </m.p>
           </div>
           <div className="">
-            <m.button
+            <m.div
               initial={{ filter: "blur(8px)", opacity: 0 }}
               animate={{ filter: "blur(0px)", opacity: 1 }}
               transition={{
@@ -52,10 +53,16 @@ function Hero() {
                 stiffness: 50,
                 delay: 1.3,
               }}
-              className="btn sec h-[60px] w-[230px] rounded-[10px] hover:bg-[#0c0c0c] fle justify-center items-start font-semibold"
+              className="btn sec"
             >
-              Book a Demo
-            </m.button>
+              <Link
+                href={"https://cal.com/srivatsa"}
+                target="_blank"
+                className="w-full h-full flex justify-center items-center"
+              >
+                Book a Demo
+              </Link>
+            </m.div>
           </div>
         </div>
         <div className=" flex justify-center gap-3 flex-col lg:flex-row md:gap-10">
