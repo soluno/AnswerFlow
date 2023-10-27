@@ -136,10 +136,12 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  bottom: 1900px;
+  bottom: 2200px;
   left: 0px;
   right: 0px;
 }
+/* bottom: 2233px; */
+
 .bg-3 {
   background-image: url(/bg-2.png);
   position: absolute;
@@ -148,27 +150,77 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  bottom: -120px;
+  bottom: 0px;
   left: 0px;
   right: 0px;
 }
-/* images background */
+.bg-1::before,
+.bg-2::before,
+.bg-3::before,
+.bg-1::after,
+.bg-2::after,
+.bg-3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 28%;
+}
+
+.bg-1::before,
+.bg-2::before,
+.bg-3::before {
+  top: 0;
+  background: linear-gradient(to bottom, #030303, #02020200);
+}
+
+.bg-1::after,
+.bg-2::after,
+.bg-3::after {
+  bottom: 0;
+  background: linear-gradient(to top, #030303, #02020200);
+}
 
 .steps {
   @apply relative section  flex gap-14 md:gap-28 items-center flex-col py-[100px] md:py-[200px] px-2 sm:px-8;
 }
 .card {
-  @apply relative py-16 px-6 md:py-16 md:px-14 flex flex-col lg:flex-row gap-20 items-center w-[100%] md:w-[96%];
-  border: double 2px transparent;
-  border-radius: 20px;
-  background-image: linear-gradient(#101010, #101010),
-    radial-gradient(circle at left center, #2f20ff00 60%, #2a3458);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  @apply relative py-16 px-6 md:py-16 md:px-14 flex flex-col lg:flex-row gap-20 items-center w-[100%] md:w-[96%] hover:scale-105 transition-all duration-700;
+  /* border: double 2px transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#101010, #101010),
+      radial-gradient(circle at left center, #2f20ff00 60%, #2a3458);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px; */
+}
+
+.border-gad-1::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 86px;
+  left: 0;
+  top: 80%;
+  z-index: 1;
+  opacity: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(59, 56, 65, 0) 22.4%,
+    #a594fd 60.94%,
+    rgba(59, 56, 65, 0)
+  );
+  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -ms-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+}
+.border-gad-1:hover::after {
+  opacity: 1;
+  top: 20%;
 }
 .border-gad-2 {
   z-index: 11;
@@ -184,6 +236,7 @@ body {
   -o-border-radius: 20px;
 }
 .border-gad-1 {
+  position: relative;
   padding-block: 2.5rem;
   padding-inline: 2.8rem;
   z-index: 11;
@@ -234,9 +287,4 @@ body {
   -o-border-radius: 3px;
   left: 0px;
   bottom: -16px;
-}
-.footerText {
-  background: linear-gradient(to bottom, #ffffff, #00000000);
-  -webkit-background-clip: text;
-  color: transparent;
 }

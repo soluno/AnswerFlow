@@ -4,7 +4,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="section mx-auto h-[70vh] flex flex-col justify-between items-start">
+    <footer className="section mx-auto flex flex-col justify-between items-start">
       <div className="flex w-full gap-40 justify-center lg:justify-start items-start py-[100px] flex-col md:flex-row lg:pl-[130px] p-4">
         <div className="flex flex-col gap-12">
           <h1 className=" font-bold text-2xl ">AnswerFlow</h1>
@@ -60,13 +60,13 @@ function Footer() {
         <div className="flex flex-col gap-12  ">
           <h1 className="font-bold text-2xl">Resources</h1>
           <div className="flex flex-col gap-6 text-[#707070]">
-            <Link href={"/"}>ChatGPT Bots for Sales Reports</Link>
-            <Link href={"/"}>ChatGPT Bots for Customer Success</Link>
-            <Link href={"/"}>ChatGPT Bots for Revenue Reports</Link>
-            <Link href={"/"}>ChatGPT Bot for Company Wiki</Link>
-            <Link href={"/"}>ChatGPT Bot for Business</Link>
-            <Link href={"/"}>ChatGPT Bot for Enterprises</Link>
-            <Link href={"/"}>Custom ChatGPT Bots</Link>
+            <p>ChatGPT Bots for Sales Reports</p>
+            <p>ChatGPT Bots for Customer Success</p>
+            <p>ChatGPT Bots for Revenue Reports</p>
+            <p>ChatGPT Bot for Company Wiki</p>
+            <p>ChatGPT Bot for Business</p>
+            <p>ChatGPT Bot for Enterprises</p>
+            <p>Custom ChatGPT Bots</p>
           </div>
         </div>
       </div>

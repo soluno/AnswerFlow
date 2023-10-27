@@ -4,7 +4,7 @@ import React from "react";
 function Steps() {
   return (
     <section className="steps">
-      <div className="card">
+      <div className="card border-gad-1">
         <div className="sticker -rotate-6 left-[60%]">
           <p>1</p>
         </div>
@@ -68,7 +68,7 @@ function Steps() {
           />
         </div>
       </div>
-      <div className="card">
+      <div className="card border-gad-1">
         <div className="sticker -rotate-2 left-[30%]">
           <p>2</p>
         </div>
@@ -129,7 +129,7 @@ function Steps() {
           />
         </div>
       </div>
-      <div className="card flex-col">
+      <div className="card flex-col border-gad-1">
         <div className="sticker rotate-6 left-[60%]">
           <p>3</p>
         </div>

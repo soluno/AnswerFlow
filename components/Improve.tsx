@@ -15,13 +15,14 @@ function Improve() {
       return prev != 0 ? prev - 1 : prev;
     });
   };
-  // useEffect(() => {
-  //   if (current !== 3) {
-  //     setTimeout(() => {
-  //       next();
-  //     }, 2000);
-  //   }
-  // }, [current]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prevImage) => (prevImage === 4 - 1 ? 0 : prevImage + 1));
+    }, 2400);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [current]);
   const [cardNum, setCardNum] = useState(0);
   const divRef = useRef<HTMLDivElement>(null);
   const refDD = useRef<HTMLDivElement>(null);
