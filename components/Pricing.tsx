@@ -21,7 +21,7 @@ function Pricing() {
             <p>Powered by GPT - 4</p>
           </div>
           <hr />
-          <div className="flex flex-col gap-4 text-[#9D9D9D] text-[22px] ">
+          <div className="flex flex-col gap-4 text-[#9D9D9D] text-[19px] ">
             <p>📄 100 Documents</p>
             <p>🔗 2 Links</p>
             <p>👨 1 Seat</p>
@@ -51,7 +51,7 @@ function Pricing() {
           <h1 className="text-[#969696] text-[35px] md:text-[42px] font-bold">
             Enterprise?
           </h1>
-          <p className=" text-[#9D9D9D] text-[16px] md:text-[22px] max-w-[70%]">
+          <p className=" text-[#9D9D9D] text-[16px] md:text-[19px] max-w-[70%]">
             Please write to us at{" "}
             <Link
               href={"mailto:team@answerflowai.com"}
@@ -63,11 +63,11 @@ function Pricing() {
           </p>
         </div>
       </div>
-      <div className="border-gad-1 flex flex-col  items-center gap-10  ">
+      <div className="border-gad-1 flex flex-col  items-center gap-4  ">
         <h1 className="text-[32px] leading-[32px] md:text-[48px] md:leading-[69px] font-bold text-center lg:max-w-[70%]">
           The Most Secure Way to Build Custom Bots for your Company
         </h1>
-        <p className="text-[18px] font-normal leading-[24px] md:text-[22px] md:leading-[35px] text-[#9D9D9D] lg:max-w-[60%] text-center">
+        <p className="text-[18px] font-normal md:text-[19px]  text-[#9D9D9D] lg:max-w-[60%] text-center pb-10">
           AnswerFlow AI is built with world-class security standards like SOC &
           GDPR. It runs on secure Microsoft Azure cloud and your data is never
           shared with LLM operators like OpenAI
