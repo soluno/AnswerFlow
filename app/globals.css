@@ -181,7 +181,7 @@ body {
 }
 
 .steps {
-  @apply relative section  flex gap-14 md:gap-28 items-center flex-col py-[100px] md:py-[200px] px-2 sm:px-8;
+  @apply relative section  flex gap-24 md:gap-28 items-center flex-col py-[100px] md:py-[200px] px-2 sm:px-8;
 }
 .card {
   @apply relative py-16 px-6 md:py-16 md:px-14 flex flex-col lg:flex-row gap-20 items-center w-[100%] md:w-[96%] hover:scale-105 transition-all duration-700;
@@ -253,7 +253,7 @@ body {
 }
 
 .sticker {
-  @apply absolute top-[-50px]  w-[100px] h-[100px] flex justify-center items-center font-medium text-4xl text-[#A595FD];
+  @apply absolute top-[-70px]  w-[100px] h-[100px] flex justify-center items-center font-medium text-4xl text-[#A595FD];
   background-image: url("/Sticker.png");
   background-position: center;
   background-size: contain;

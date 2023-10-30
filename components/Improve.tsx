@@ -18,7 +18,7 @@ function Improve() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prevImage) => (prevImage === 4 - 1 ? 0 : prevImage + 1));
-    }, 2400);
+    }, 4400);
     return () => {
       clearInterval(interval);
     };
@@ -468,7 +468,7 @@ function Improve() {
               }`}
             >
               {" "}
-              prev{" "}
+              prevues{" "}
             </button>
             <button
               onClick={next}

@@ -1,5 +1,6 @@
 "use client";
 import { LazyMotion, domAnimation, m } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -10,12 +11,10 @@ function Header() {
         initial={{ y: -150 }}
         animate={{ y: 0 }}
         transition={{ duration: 1, type: "spring", stiffness: 50 }}
-        className="section flex justify-between items-center px-2 sm:px-4 sm:py-2 md:px-4 md:py-8 fle-col transition-all duration-1000"
+        className="section flex justify-between items-center py-4 px-2 sm:px-4 sm:py-2 md:px-4 md:py-8 fle-col transition-all duration-1000"
       >
-        <div className="">
-          <h1 className="font-bold text-[20px] sm:text-[26px] leading-[73px] md:text-[32px] ">
-            AnswerFlow
-          </h1>
+        <div className="pr-4">
+          <Image src={"/logo.png"} width={240} height={100} alt="logo" />
         </div>
         <div className="">
           <Link
