@@ -2,14 +2,13 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 
 const inter = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AnswerFlow AI - Boost Efficiency with Data-Driven Chatbots",
+  title: "AnswerFlow AI - Boost Efficiency with Data-Driven Chatbot",
   description:
-    "Elevate your business efficiency with AnswerFlow AI. Leverage data-driven chatbots and natural language processing for better insights and automation",
+    "Elevate your business efficiency with AnswerFlow AI. Leverage data-driven chatbot and natural language processing for better insights and automation",
   icons: {
     icon: "/favicon.png",
   },
