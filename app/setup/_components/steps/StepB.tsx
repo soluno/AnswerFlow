@@ -6,7 +6,7 @@ function StepB({ handleNext }: props) {
       <div className="flex-1 flex justify-start items-start py-20 px-20 h-full">
         <h1 className="text-[40px] leading-[74px] font-bold">Selected Plan</h1>
       </div>
-      <div className="h-full w-[30%] bg-[#0B0B0B] px-20 py-30 flex flex-col justify-end items-center gap-20 py-20">
+      <div className="h-full min-w-[30%] bg-[#0B0B0B] px-20 py-30 flex flex-col justify-end items-center gap-20 py-20">
         <button className="btn sec" onClick={handleNext}>
           Proceed to Payment
         </button>

@@ -7,7 +7,7 @@ import ProgressBar from "./_components/ui/ProgressBar";
 const inter = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AnswerFlow AI - Boost Efficiency with Data-Driven Chatbot",
+  title: "AnswerFlow AI - SetUp Bot",
   description:
     "Elevate your business efficiency with AnswerFlow AI. Leverage data-driven chatbot and natural language processing for better insights and automation",
   icons: {

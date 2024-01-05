@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import StepA from "./steps/StepA";
 import StepB from "./steps/StepB";
 import StepC from "./steps/StepC";
@@ -16,13 +16,16 @@ type stepsType = "a" | "b" | "c" | "d" | "e" | "final";
 function Setup() {
   const increaseProgress = useProgressBar((state) => state.increaseProgress);
   const [step, setStep] = useState<stepsType>("a");
+
   const [formData, setFormData] = useState<formDatatype>({
     email: "",
     password: "",
   });
 
   const handleNext = () => {
-    increaseProgress();
+    if (step !== "c") {
+      increaseProgress();
+    }
     if (step === "a") setStep("b");
     else if (step === "b") setStep("c");
     else if (step === "c") setStep("d");

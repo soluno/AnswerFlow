@@ -5,7 +5,7 @@ function StepC({ handleNext }: props) {
   useEffect(() => {
     setTimeout(() => {
       handleNext();
-    }, 3000);
+    }, 2000);
   }, [handleNext]);
   return (
     <div className="flex justify-center items-center flex-col h-full">

@@ -11,7 +11,7 @@ function StepA({ handleNext }: props) {
           Embrace the future of <br /> Custom AI Bots
         </h1>
       </div>
-      <div className="h-full w-[30%] bg-[#0B0B0B] px-20 py-30 flex flex-col justify-center items-center gap-20">
+      <div className="h-full min-w-[30%] bg-[#0B0B0B] px-20 py-30 flex flex-col justify-center items-center gap-20">
         <Image src={"/logo.svg"} width={250} height={60} alt="logo png" />
         <form className="flex flex-col gap-10 w-full">
           <div className="flex flex-col gap-2">

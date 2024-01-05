@@ -60,7 +60,35 @@ function StepE({ handleNext }: props) {
           </button>
         </div>
       </form>
-      <div className="h-full w-[30%] bg-[#0B0B0B] px-20 py-30 flex flex-col justify-center items-center gap-20"></div>
+      <div className="h-full min-w-[30%] bg-[#0B0B0B] py-30 flex flex-col justify-center items-start gap-20">
+        <h2 className="px-20 text-[#707070] text-[32px] font-bold">
+          Setup Progress
+        </h2>
+        <div className="flex flex-col justify-center items-start gap-10 ">
+          <div className="flex flex-col justify-start items-start gap-6 px-20">
+            <p className="text-[#9D9D9D] uppercase">1. basic settings</p>
+            <p className="text-[18px]">Sales Analysis Bot</p>
+          </div>
+          <br />
+          <div className="flex flex-col justify-start items-start gap-6 px-20">
+            <p className="text-[#9D9D9D] uppercase">2. Data sources</p>
+            <div className="flex flex-col gap-2">
+              <div className="w-[341px] h-[31px] bg-[#1E1E1E] rounded"></div>
+              <div className="w-[341px] h-[31px] bg-[#1E1E1E] rounded"></div>
+              <div className="w-[341px] h-[31px] bg-[#1E1E1E] rounded"></div>
+            </div>
+          </div>
+          <br />
+          <div className="flex flex-col justify-start items-start gap-6 px-20">
+            <p className="text-[#9D9D9D] uppercase">3. create bot</p>
+            <div className="flex flex-col gap-2">
+              <div className="w-[341px] h-[31px] bg-[#1E1E1E] rounded"></div>
+              <div className="w-[341px] h-[31px] bg-[#1E1E1E] rounded"></div>
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
     </div>
   );
 }
