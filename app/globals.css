@@ -227,8 +227,8 @@ body {
 }
 .border-gad-1 {
   position: relative;
-  padding-block: 2.5rem;
-  padding-inline: 2.8rem;
+  padding-block: 2.8rem;
+  padding-inline: 2rem;
   z-index: 11;
   border: double 2px transparent;
   border-radius: 20px;
