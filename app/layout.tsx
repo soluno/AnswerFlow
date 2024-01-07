@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/next-script-for-ga */
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
+import AuthProvider from "./context/Auth";
 
 const inter = Raleway({ subsets: ["latin"] });
 
@@ -37,7 +37,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }
