@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 import StepA from "./steps/StepA";
 import StepB from "./steps/StepB";
 import StepC from "./steps/StepC";
-import { AnimatePresence } from "framer-motion";
-import { useProgressBar } from "@/hooks/use-progressbar-hook";
 import StepD from "./steps/StepD";
 import StepE from "./steps/StepE";
+import { AnimatePresence } from "framer-motion";
+import { useProgressBar } from "@/hooks/use-progressbar-hook";
 
 type formDatatype = {
   email: string;

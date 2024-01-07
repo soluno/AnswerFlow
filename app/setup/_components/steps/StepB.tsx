@@ -1,16 +1,18 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 type props = { handleNext: () => void };
 function StepB({ handleNext }: props) {
+  useEffect(() => {
+    setTimeout(() => {
+      handleNext();
+    }, 2000);
+  }, [handleNext]);
   return (
-    <div className="absolute left-0 h-screen flex justify-center items-center w-full">
-      <div className="flex-1 flex justify-start items-start py-20 px-20 h-full">
-        <h1 className="text-[40px] leading-[74px] font-bold">Selected Plan</h1>
-      </div>
-      <div className="h-full min-w-[30%] bg-[#0B0B0B] px-20 py-30 flex flex-col justify-end items-center gap-20 py-20">
-        <button className="btn sec" onClick={handleNext}>
-          Proceed to Payment
-        </button>
-      </div>
+    <div className="flex justify-center items-center flex-col h-full">
+      <h1 className="text-[64px] font-normal">Hoorah, Welcome to AnswerFlow</h1>
+      <p className="text-[#606060] font-normal text-[24px]">
+        Assembling the army of zeros & ones ...
+      </p>
     </div>
   );
 }
