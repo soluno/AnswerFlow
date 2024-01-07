@@ -181,7 +181,7 @@ function Pricing() {
         </Link>
       </div>
       <div className="absolute bottom-0 left-[50%] -translate-x-[50%] w-[100%] ">
-        <Image src={"/div.png"} width={1200} height={220} alt="separator" />
+        <Image src={"/div.png"} width={1200} height={51} alt="separator" />
       </div>
     </section>
   );
