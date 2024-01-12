@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import AuthProvider from "./context/Auth";
+import { Toaster } from "sonner";
 
 const inter = Raleway({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        <Toaster position="bottom-center" />
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

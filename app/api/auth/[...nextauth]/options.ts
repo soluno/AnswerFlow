@@ -1,12 +1,30 @@
 import type { NextAuthOptions } from "next-auth";
+
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
+import EmailProvider from "next-auth/providers/email";
 
-export const options: NextAuthOptions = {
+import type { Adapter } from "next-auth/adapters";
+
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import prisma from "@/app/utils/db";
+
+export const options = {
   providers: [
     GoogleProvider({
-      clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET as string,
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+    }),
+    EmailProvider({
+      server: {
+        host: process.env.EMAIL_SERVER_HOST,
+        port: process.env.EMAIL_SERVER_PORT,
+        auth: {
+          user: process.env.EMAIL_SERVER_USER,
+          pass: process.env.EMAIL_SERVER_PASSWORD,
+        },
+      },
+      from: process.env.EMAIL_FROM,
     }),
     CredentialsProvider({
       name: "Credentials",
@@ -21,4 +39,5 @@ export const options: NextAuthOptions = {
       },
     }),
   ],
-};
+  adapter: PrismaAdapter(prisma) as Adapter,
+} satisfies NextAuthOptions;

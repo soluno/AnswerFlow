@@ -1,10 +1,12 @@
+import { useFormContext } from "@/app/context/FormContext";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 type props = { handleNext: () => void };
 function StepC({ handleNext }: props) {
+  const { formData, setOpenAiApiKey } = useFormContext();
   return (
-    <div className="absolute left-0 h-screen flex justify-center items-center w-full flex-col ">
+    <div className="h-screen flex justify-center items-center w-full flex-col ">
       <form className="flex flex-col justify-around items-center w-[500px] h-full">
         <Image src={"/logo.svg"} width={250} height={60} alt="logo png" />
         <div className="flex flex-col gap-3">
@@ -14,6 +16,8 @@ function StepC({ handleNext }: props) {
           <input
             type="text"
             id="APIKey"
+            value={formData.openAiApiKey}
+            onChange={(e) => setOpenAiApiKey(e.target.value)}
             required
             placeholder="Paste your key here"
             className="bg-[#232323] rounded-[10px] px-8 py-4 outline-none"
@@ -27,7 +31,18 @@ function StepC({ handleNext }: props) {
         </div>
 
         <div className="flex justify-center items-center flex-col gap-4">
-          <button className="btn sec flex !justify-around" onClick={handleNext}>
+          <button
+            disabled={formData.openAiApiKey == ""}
+            className={`btn sec flex !justify-around ${
+              formData.openAiApiKey == "" && " opacity-50 cursor-not-allowed"
+            }`}
+            onClick={(e) => {
+              if (formData.openAiApiKey) {
+                e.preventDefault();
+                handleNext();
+              }
+            }}
+          >
             <p>Next</p>
             <Image
               src={"/rightarrow.png"}

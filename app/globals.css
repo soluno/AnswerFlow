@@ -278,3 +278,6 @@ body {
   left: 0px;
   bottom: -16px;
 }
+input[type="file"] {
+  display: none;
+}

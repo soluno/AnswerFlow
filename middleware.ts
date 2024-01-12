@@ -2,10 +2,11 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
+  // const session = getSession()
   const cookie = request.cookies.get("next-auth.session-token");
   if (
     (!cookie && request.url.includes("setup")) ||
-    request.url.includes("user")
+    (!cookie && request.url.includes("user"))
   ) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
