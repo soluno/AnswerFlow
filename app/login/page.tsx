@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { signIn, signOut } from "next-auth/react";
-import { toast } from "sonner";
-import { usePlan } from "@/hooks/use-plan-hook";
 
 function Page() {
   const signUpWithGoogle = () => {

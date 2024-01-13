@@ -16,17 +16,15 @@ function StepC({ handleNext }: props) {
       const userDate = session.data?.user;
       try {
         const response = await fetch(
-          "http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/create_user",
+          `http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/update_user/${localStorage.getItem(
+            "userId"
+          )}`,
           {
-            method: "POST",
+            method: "PUT",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              name: userDate.name,
-              email: userDate.email,
-              pwd: "134324",
-              phone: "0645612378",
               openai_api_key: formData.openAiApiKey,
             }),
           }
@@ -36,7 +34,7 @@ function StepC({ handleNext }: props) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const responseData = await response.json();
-        console.log(responseData);
+        console.log(responseData.user.id);
       } catch (error) {
         console.error("Error:", error);
       }

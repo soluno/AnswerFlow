@@ -7,11 +7,38 @@ function StepD({ handleNext }: props) {
   const { formData, setBotName, setBotPurpose, setToneOfVoice } =
     useFormContext();
 
-  const createBotHandle = (
+  const createBotHandle = async (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     if (formData.botName || formData.botPurpose || formData.toneOfVoice) {
       e.preventDefault();
+      try {
+        const response = await fetch(
+          `http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/create_bot/${localStorage.getItem(
+            "userId"
+          )}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: formData.botName,
+              system_prompt: formData.botPurpose,
+              tone: formData.toneOfVoice,
+              openai_api_key: formData.openAiApiKey,
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const responseData = await response.json();
+        window.localStorage.setItem("botId", responseData.bot.id);
+      } catch (error) {
+        console.error("Error:", error);
+      }
       handleNext();
     }
   };

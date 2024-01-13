@@ -1,5 +1,6 @@
 "use client";
 
+import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 
 type props = { handleNext: () => void };
@@ -9,6 +10,8 @@ type YourPlanType = {
   method: "monthly" | "annual";
 };
 function StepA({ handleNext }: props) {
+  const session = useSession();
+
   const [planFromLocal, setPlanFromLocal] = useState<YourPlanType | null>(null);
 
   useEffect(() => {
@@ -23,6 +26,55 @@ function StepA({ handleNext }: props) {
     }
   }, []);
 
+  const createUser = async () => {
+    const userDate = session.data?.user;
+    try {
+      const response = await fetch(
+        "http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/create_user",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: userDate?.name,
+            email: userDate?.email,
+            pwd: "134324",
+            phone: "0645612378",
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const responseData = await response.json();
+      window.localStorage.setItem("userId", responseData.user.id);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+    setPlan();
+    handleNext();
+  };
+  const setPlan = async () => {
+    const userId = localStorage.getItem("userId");
+    try {
+      const response = await fetch(
+        `http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/set_plan/${userId}/1`,
+        {
+          method: "PUT",
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const responseData = await response.json();
+      window.localStorage.setItem("userId", responseData.user.id);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
   return (
     <div className="flex justify-center items-center w-full">
       <div className="flex-1 flex flex-col gap-10 justify-start items-start p-20 ">
@@ -310,7 +362,7 @@ function StepA({ handleNext }: props) {
           </div>
         </div>
         <div className="flex justify-center px-20">
-          <button className="btn sec !w-[80%]" onClick={handleNext}>
+          <button className="btn sec !w-[80%]" onClick={createUser}>
             Proceed to Payment
           </button>
         </div>

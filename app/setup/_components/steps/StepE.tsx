@@ -8,6 +8,40 @@ function StepE({ handleNext }: props) {
   const [Url, setUrl] = useState("");
   const [fileTypeSelected, setFileTypeSelected] = useState("Add Data Source");
   const [toggle, setToggle] = useState(false);
+
+  const addDataSource = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    if (formData.files.length > 0 || formData.urls.length > 0) {
+      e.preventDefault();
+      try {
+        const response = await fetch(
+          `http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/create_resource/${localStorage.getItem(
+            "userId"
+          )}/${localStorage.getItem("botId")}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              type: "url",
+              name: "https://en.wikipedia.org/wiki/Prompt_engineering",
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const responseData = await response.json();
+        window.localStorage.setItem("botId", responseData.bot.id);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+      handleNext();
+    }
+  };
   return (
     <div className="min-h-screen flex justify-center items-center w-full">
       <form className="flex flex-1 flex-col justify-between min-h-screen items-start w-full px-20 py-20">
@@ -161,12 +195,7 @@ function StepE({ handleNext }: props) {
               formData.files.length == 0 &&
               " opacity-50 cursor-not-allowed"
             }`}
-            onClick={(e) => {
-              if (formData.files.length > 0 || formData.urls.length > 0) {
-                e.preventDefault();
-                handleNext();
-              }
-            }}
+            onClick={addDataSource}
           >
             <p>Finish Setup</p>
           </button>

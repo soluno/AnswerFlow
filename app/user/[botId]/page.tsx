@@ -24,7 +24,7 @@ type sectionType =
 function Page({ params }: props) {
   const [activeSection, setActiveSection] = useState<sectionType>("chat");
   const botId = params.botId;
-  const session = useSession();
+
   return (
     <div className="flex flex-col gap-6 p-6 w-full min-h-screen">
       <NavBar />

@@ -17,7 +17,10 @@ function StepFinal({ handleNext }: props) {
           Yahoo, your AnswerFlow AI Bot is up and running!
         </p>
       </div>
-      <Link href={"/user"} className="btn sec">
+      <Link
+        href={`/user/${localStorage.getItem("userId")}`}
+        className="btn sec"
+      >
         Start Chatting
       </Link>
     </div>

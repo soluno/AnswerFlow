@@ -19,8 +19,8 @@ function SideBar({ activeSection, setActiveSection }: props) {
           onClick={() => {
             setActiveSection("chat");
           }}
-          className={`flex gap-4 items-center cursor-pointer brightness-50 transition-all hover:brightness-100 ${
-            activeSection == "chat" && "brightness-100"
+          className={`flex gap-4 items-center cursor-pointer hover:brightness-100 brightness-50 transition-all ${
+            activeSection == "chat" && "!brightness-100"
           }`}
         >
           <Image src={"/chat.png"} width={30} height={30} alt="logo png" />
@@ -31,10 +31,15 @@ function SideBar({ activeSection, setActiveSection }: props) {
             setActiveSection("pastChat");
           }}
           className={`flex gap-4 items-center cursor-pointer brightness-50 transition-all hover:brightness-100 ${
-            activeSection == "pastChat" && "brightness-100"
+            activeSection == "pastChat" && "!brightness-100"
           }`}
         >
-          <Image src={"/chat.png"} width={25} height={25} alt="logo png" />
+          <Image
+            src={"/chatHistory.png"}
+            width={25}
+            height={25}
+            alt="chatHistory png"
+          />
           <p>Past Chats</p>
         </div>
         <div
@@ -42,10 +47,15 @@ function SideBar({ activeSection, setActiveSection }: props) {
             setActiveSection("dataSources");
           }}
           className={`flex gap-4 items-center cursor-pointer brightness-50 transition-all hover:brightness-100 ${
-            activeSection == "dataSources" && "brightness-100"
+            activeSection == "dataSources" && "!brightness-100"
           }`}
         >
-          <Image src={"/chat.png"} width={30} height={30} alt="logo png" />
+          <Image
+            src={"/dataSource.png"}
+            width={30}
+            height={30}
+            alt="dataSource png"
+          />
           <p>Data Sources</p>
         </div>
         <div
@@ -53,10 +63,10 @@ function SideBar({ activeSection, setActiveSection }: props) {
             setActiveSection("export");
           }}
           className={`flex gap-4 items-center cursor-pointer brightness-50 transition-all hover:brightness-100 ${
-            activeSection == "export" && "brightness-100"
+            activeSection == "export" && "!brightness-100"
           }`}
         >
-          <Image src={"/chat.png"} width={30} height={30} alt="logo png" />
+          <Image src={"/export.png"} width={30} height={30} alt="export png" />
           <p>Export</p>
         </div>
         <div
@@ -64,10 +74,15 @@ function SideBar({ activeSection, setActiveSection }: props) {
             setActiveSection("botSettings");
           }}
           className={`flex gap-4 items-center cursor-pointer brightness-50 transition-all hover:brightness-100 ${
-            activeSection == "botSettings" && "brightness-100"
+            activeSection == "botSettings" && "!brightness-100"
           }`}
         >
-          <Image src={"/chat.png"} width={30} height={30} alt="logo png" />
+          <Image
+            src={"/settings.png"}
+            width={30}
+            height={30}
+            alt="settings png"
+          />
           <p>Bot Settings</p>
         </div>
       </div>
