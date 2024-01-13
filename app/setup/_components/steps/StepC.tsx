@@ -1,10 +1,48 @@
 import { useFormContext } from "@/app/context/FormContext";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 type props = { handleNext: () => void };
 function StepC({ handleNext }: props) {
   const { formData, setOpenAiApiKey } = useFormContext();
+  const session = useSession();
+
+  const handleCreateUser = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    if (formData.openAiApiKey && session.data?.user) {
+      e.preventDefault();
+      const userDate = session.data?.user;
+      try {
+        const response = await fetch(
+          "http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/create_user",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: userDate.name,
+              email: userDate.email,
+              pwd: "134324",
+              phone: "0645612378",
+              openai_api_key: formData.openAiApiKey,
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const responseData = await response.json();
+        console.log(responseData);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+      handleNext();
+    }
+  };
   return (
     <div className="h-screen flex justify-center items-center w-full flex-col ">
       <form className="flex flex-col justify-around items-center w-[500px] h-full">
@@ -36,12 +74,7 @@ function StepC({ handleNext }: props) {
             className={`btn sec flex !justify-around ${
               formData.openAiApiKey == "" && " opacity-50 cursor-not-allowed"
             }`}
-            onClick={(e) => {
-              if (formData.openAiApiKey) {
-                e.preventDefault();
-                handleNext();
-              }
-            }}
+            onClick={handleCreateUser}
           >
             <p>Next</p>
             <Image

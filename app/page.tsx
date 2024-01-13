@@ -7,7 +7,6 @@ import Improve from "@/components/Improve";
 import Pricing from "@/components/Pricing";
 import Steps from "@/components/Steps";
 import TextAnimation from "@/components/TextAnimation";
-import Image from "next/image";
 
 export default function Home() {
   return (

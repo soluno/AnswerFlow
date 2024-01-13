@@ -31,7 +31,7 @@ function StepE({ handleNext }: props) {
             </div>
 
             <div
-              className={`flex justify-start flex-col gap-4 px-10 py-4 rounded-[10px] bg-[#333333] absolute top-[70px] w-[fill] left-0 ${
+              className={`flex justify-start flex-col gap-4 px-10 py-4 rounded-[10px] bg-[#333333] absolute top-[70px] w-[stretch] left-0 ${
                 toggle && " invisible"
               }`}
             >

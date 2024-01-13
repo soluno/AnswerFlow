@@ -1,9 +1,12 @@
+import { getSession } from "next-auth/react";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  // const session = getSession()
-  const cookie = request.cookies.get("next-auth.session-token");
+  const session = getSession();
+  const cookie =
+    request.cookies.get("__Secure-next-auth.session-token") ||
+    request.cookies.get("next-auth.session-token");
   if (
     (!cookie && request.url.includes("setup")) ||
     (!cookie && request.url.includes("user"))

@@ -7,6 +7,14 @@ function StepD({ handleNext }: props) {
   const { formData, setBotName, setBotPurpose, setToneOfVoice } =
     useFormContext();
 
+  const createBotHandle = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    if (formData.botName || formData.botPurpose || formData.toneOfVoice) {
+      e.preventDefault();
+      handleNext();
+    }
+  };
   return (
     <div className="min-h-screen flex justify-center items-center w-full">
       <form className="flex flex-1 flex-col justify-between min-h-screen  items-start w-full px-20 py-20">
@@ -78,16 +86,7 @@ function StepD({ handleNext }: props) {
                 formData.toneOfVoice.length == 0) &&
               " opacity-50 cursor-not-allowed"
             }`}
-            onClick={(e) => {
-              if (
-                formData.botName ||
-                formData.botPurpose ||
-                formData.toneOfVoice
-              ) {
-                e.preventDefault();
-                handleNext();
-              }
-            }}
+            onClick={(e) => createBotHandle(e)}
           >
             <p>Next</p>
             <Image
