@@ -16,7 +16,7 @@ function StepC({ handleNext }: props) {
       const userDate = session.data?.user;
       try {
         const response = await fetch(
-          `http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/update_user/${localStorage.getItem(
+          `//ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/update_user/${localStorage.getItem(
             "userId"
           )}`,
           {

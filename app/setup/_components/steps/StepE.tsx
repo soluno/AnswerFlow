@@ -16,7 +16,7 @@ function StepE({ handleNext }: props) {
       e.preventDefault();
       try {
         const response = await fetch(
-          `http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/create_resource/${localStorage.getItem(
+          `//ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/create_resource/${localStorage.getItem(
             "userId"
           )}/${localStorage.getItem("botId")}`,
           {

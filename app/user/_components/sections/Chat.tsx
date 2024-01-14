@@ -18,7 +18,7 @@ function Chat({ botId }: props) {
   const getBotData = async (botId: string) => {
     try {
       const response = await fetch(
-        `http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/get_bot/${botId}`,
+        `//ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/get_bot/${botId}`,
         {
           method: "GET",
         }
@@ -52,7 +52,7 @@ function Chat({ botId }: props) {
 
       try {
         const response = await fetch(
-          `http://ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/chat/${botData.key}`,
+          `//ec2-13-127-192-129.ap-south-1.compute.amazonaws.com/chat/${botData.key}`,
           {
             method: "POST",
             headers: {
