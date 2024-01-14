@@ -13,7 +13,7 @@ type props = {
 };
 function SideBar({ activeSection, setActiveSection }: props) {
   return (
-    <div className="flex flex-col justify-between w-[300px] ">
+    <div className="flex flex-col justify-between min-w-[300px] ">
       <div className="rounded-[10px] bg-[#161616] px-6 py-8 flex flex-col gap-6 text-[22px] font-medium">
         <div
           onClick={() => {

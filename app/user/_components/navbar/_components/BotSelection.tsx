@@ -1,6 +1,10 @@
 import React from "react";
 
-function BotSelection() {
+type props = {
+  userId: string;
+};
+function BotSelection({ userId }: props) {
+  
   return <div>BotSelection</div>;
 }
 

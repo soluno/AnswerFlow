@@ -20,25 +20,19 @@ type sectionType =
   | "pastChat"
   | "dataSources"
   | "export"
-  | "botSettings";
+  | "botSettings"
+  | "";
 function Page({ params }: props) {
   const [activeSection, setActiveSection] = useState<sectionType>("chat");
   const botId = params.botId;
 
   return (
-    <div className="flex flex-col gap-6 p-6 w-full min-h-screen">
-      <NavBar />
-      <div className="flex gap-6 flex-1">
-        <SideBar
-          activeSection={activeSection}
-          setActiveSection={setActiveSection}
-        />
-        {activeSection == "chat" && <Chat />}
-        {activeSection == "pastChat" && <PastChat />}
-        {activeSection == "dataSources" && <DataSources />}
-        {activeSection == "export" && <Export />}
-        {activeSection == "botSettings" && <BotSettings />}
-      </div>
+    <div className="flex flex-col gap-6 w-full">
+      {activeSection == "chat" && <Chat botId={botId} />}
+      {/* {activeSection == "pastChat" && <PastChat  botId={botId} />}
+      {activeSection == "dataSources" && <DataSources   botId={botId}/>}
+      {activeSection == "export" && <Export  botId={botId} />}
+      {activeSection == "botSettings" && <BotSettings  botId={botId}/>} */}
     </div>
   );
 }

@@ -1,7 +1,9 @@
+import { useSession } from "next-auth/react";
 import React from "react";
 
 function UserItem() {
-  return <div>UserItem</div>;
+  const session = useSession();
+  return <div>{session.data?.user?.name}</div>;
 }
 
 export default UserItem;
