@@ -1,4 +1,5 @@
 import { useFormContext } from "@/context/FormContext";
+import { useSteps } from "@/hooks/use-steps";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,7 @@ import React from "react";
 type props = { handleNext: () => void };
 function StepFinal({ handleNext }: props) {
   const { resetFormData } = useFormContext();
+  const resetToNewBot = useSteps((state) => state.resetToNewBot);
   return (
     <div className="min-h-screen flex flex-col gap-10 text-center justify-center items-center ">
       <div className="">
@@ -18,7 +20,10 @@ function StepFinal({ handleNext }: props) {
         </p>
       </div>
       <Link
-        onClick={() => resetFormData()}
+        onClick={() => {
+          resetFormData();
+          resetToNewBot();
+        }}
         href={`/user/${localStorage.getItem("userId")}`}
         className="btn sec"
       >

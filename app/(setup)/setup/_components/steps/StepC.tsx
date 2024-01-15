@@ -42,7 +42,7 @@ function StepC({ handleNext }: props) {
     }
   };
   return (
-    <div className="h-screen flex justify-center items-center w-full flex-col ">
+    <section className="h-screen flex justify-center items-center w-full flex-col ">
       <form className="flex flex-col justify-around items-center w-[500px] h-full">
         <Image src={"/logo.svg"} width={250} height={60} alt="logo png" />
         <div className="flex flex-col gap-3">
@@ -84,7 +84,7 @@ function StepC({ handleNext }: props) {
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 }
 

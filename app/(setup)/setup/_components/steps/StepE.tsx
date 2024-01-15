@@ -26,7 +26,7 @@ function StepE({ handleNext }: props) {
             },
             body: JSON.stringify({
               type: "url",
-              name: "https://en.wikipedia.org/wiki/Prompt_engineering",
+              name: formData.urls[0],
             }),
           }
         );
