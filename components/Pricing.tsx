@@ -39,13 +39,13 @@ function Pricing() {
         </div>
       </div>
       <div className="flex flex-col xl:flex-row gap-10 w-[100%]  mx-auto">
-        <div className="border-gad-1 flex-1 flex flex-col justify-between gap-20 w-full font-sans">
+        <div className="border-gad-1 flex-1 flex flex-col justify-between gap-20 w-full  ">
           <div className="flex flex-col gap-10 flex-[4]">
             <div className="flex flex-col gap-2 items-start">
               <p className="text-[#A595FD] font-semibold uppercase text-[16px] ">
                 Basic
               </p>
-              <span className="text-[36px] font-bold text-white font-sans">
+              <span className="text-[36px] font-bold text-white  ">
                 $
                 {method == "monthly"
                   ? 19
@@ -87,7 +87,7 @@ function Pricing() {
             </div>
           </div>
         </div>
-        <div className="border-gad-1 flex-1 flex flex-col gap-10 w-full relative font-sans ">
+        <div className="border-gad-1 flex-1 flex flex-col gap-10 w-full relative   ">
           <div className="flex flex-col gap-10 flex-[4]">
             <div className="flex flex-col gap-2 items-start">
               <div className="flex justify-between w-full items-center">
@@ -98,7 +98,7 @@ function Pricing() {
                   most popular
                 </div>
               </div>
-              <span className="text-[36px] font-bold text-white font-sans">
+              <span className="text-[36px] font-bold text-white  ">
                 $
                 {method == "monthly"
                   ? 99
@@ -146,7 +146,7 @@ function Pricing() {
             </p>
           </div>
         </div>
-        <div className="border-gad-1 flex-1 flex flex-col gap-10 w-full relative font-sans">
+        <div className="border-gad-1 flex-1 flex flex-col gap-10 w-full relative  ">
           <div className="flex flex-col gap-10 flex-[4]">
             <div className="flex flex-col gap-2 items-start">
               <div className="flex justify-between w-full items-center">

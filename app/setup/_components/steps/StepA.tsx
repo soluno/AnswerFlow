@@ -1,19 +1,16 @@
 "use client";
 
+import { YourPlanType } from "@/types/plan";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 
 type props = { handleNext: () => void };
 
-type YourPlanType = {
-  plan: "basic" | "starter" | "pro";
-  method: "monthly" | "annual";
-};
 function StepA({ handleNext }: props) {
+  const [planFromLocal, setPlanFromLocal] = useState<YourPlanType | null>(null);
   const session = useSession();
 
-  const [planFromLocal, setPlanFromLocal] = useState<YourPlanType | null>(null);
-
+  // retrieving plan from local storage
   useEffect(() => {
     try {
       const storedPlan = localStorage.getItem("plan");
@@ -212,7 +209,7 @@ function StepA({ handleNext }: props) {
         </form>
       </div>
 
-      <div className="min-w-[33%] bg-[#0B0B0B] flex flex-col justify-center gap-8 font-sans h-screen fixed top-0 right-0">
+      <div className="min-w-[33%] bg-[#0B0B0B] flex flex-col justify-center gap-8   h-screen fixed top-0 right-0">
         <h1 className="text-[32px] font-bold text-[#707070] px-20">
           Plan Details
         </h1>

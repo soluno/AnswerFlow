@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { signIn, signOut } from "next-auth/react";
+import { signIn } from "next-auth/react";
 
 function Page() {
   const signUpWithGoogle = () => {
