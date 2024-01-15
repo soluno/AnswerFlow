@@ -1,11 +1,11 @@
 import { create } from "zustand";
 type progressBarType = {
   progress: number;
-  increaseProgress: () => void;
-  decreaseProgress: () => void;
+  increaseProgress: (number?: number) => void;
+  decreaseProgress: (number?: number) => void;
 };
 export const useProgressBar = create<progressBarType>((set) => ({
   progress: 0,
-  increaseProgress: () => set((prev) => ({ progress: prev.progress + 1 })),
+  increaseProgress: (number) => set((prev) => ({ progress: number })),
   decreaseProgress: () => set((prev) => ({ progress: prev.progress - 1 })),
 }));
