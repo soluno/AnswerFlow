@@ -4,9 +4,15 @@ type useStepsType = {
   activeStep: stepsType;
   setActiveStep: (value: stepsType) => void;
 };
+
+const activeStepFromLocal =
+  typeof window !== "undefined" &&
+  (localStorage.getItem("activeStep") as stepsType);
+
 export const useSteps = create<useStepsType>((set) => ({
-  activeStep: "a",
+  activeStep: activeStepFromLocal || "a",
   setActiveStep(value: stepsType) {
     set({ activeStep: value });
+    localStorage.setItem("activeStep", value);
   },
 }));

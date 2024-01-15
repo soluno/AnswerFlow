@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Sections } from "./_components/Sections";
+import { useActiveSection } from "@/hooks/use-active-section";
 
 type props = {
   params: {
@@ -10,9 +11,11 @@ type props = {
 };
 function Page({ params }: props) {
   const [botData, setBotData] = useState<any>();
+  const setActiveSection = useActiveSection((state) => state.setActiveSection);
   useEffect(() => {
+    setActiveSection("Chat");
     getBotData(params.botId);
-  }, [params.botId]);
+  }, [params.botId, setActiveSection]);
   const getBotData = async (botId: string) => {
     try {
       const response = await fetch(
