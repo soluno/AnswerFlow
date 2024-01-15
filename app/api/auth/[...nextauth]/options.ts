@@ -7,7 +7,7 @@ import EmailProvider from "next-auth/providers/email";
 import type { Adapter } from "next-auth/adapters";
 
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import prisma from "@/app/utils/db";
+import prisma from "@/utils/db";
 
 interface UserSession {
   name?: string | null | undefined;
